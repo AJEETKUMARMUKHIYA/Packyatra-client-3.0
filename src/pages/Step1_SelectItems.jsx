@@ -32,6 +32,7 @@ import {
 } from "@mui/icons-material";
 
 import RoomScanner from "../components/RoomScanner";
+import AIBookingCopilot from "../components/AIBookingCopilot";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -41,6 +42,7 @@ const Step1_SelectItems = ({
   onNext,
   inventoryData,
   organizedInventory,
+  timeSlots,
   loading
 }) => {
   const { selectedItems, categories } = bookingData;
@@ -291,6 +293,14 @@ const Step1_SelectItems = ({
           }}
         />
       </Paper>
+
+      {/* AI BOOKING COPILOT (CONVERSATIONAL SHIFTING AUTOMATION) */}
+      <AIBookingCopilot
+        bookingData={bookingData}
+        onUpdate={onUpdate}
+        inventoryData={inventoryData}
+        timeSlots={timeSlots}
+      />
 
       {/* AI ROOM SCANNER */}
       <RoomScanner

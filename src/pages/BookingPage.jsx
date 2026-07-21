@@ -242,6 +242,7 @@ const BookingPage = () => {
             {...commonProps}
             inventoryData={inventoryData}
             organizedInventory={organizedInventory}
+            timeSlots={timeSlots}
           />
         );
       } else {
