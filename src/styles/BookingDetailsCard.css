@@ -1,0 +1,124 @@
+/* ==============================
+   Booking Details Card – Premium
+   ============================== */
+
+.booking-card {
+  max-width: 620px;
+  margin: 20px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e6e8ec;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* Title */
+.booking-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937; /* Dark neutral */
+  margin-bottom: 16px;
+}
+
+/* List */
+.booking-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List Item */
+.booking-card li {
+  background: #f9fafb;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #374151;
+  border: 1px solid #eef0f3;
+}
+
+/* Item Label */
+.booking-card li span:first-child {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Item Value */
+.booking-card li span:last-child {
+  font-weight: 600;
+  color: #2563eb; /* Soft international blue */
+}
+
+/* Continue Button */
+.booking-card .continue-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.booking-card .continue-btn:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* Active State */
+.booking-card .continue-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==============================
+   Responsive Adjustments
+   ============================== */
+
+@media (max-width: 768px) {
+  .booking-card {
+    padding: 18px;
+    margin: 15px;
+  }
+
+  .booking-card h3 {
+    font-size: 20px;
+  }
+
+  .booking-card li {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .booking-card .continue-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-card h3 {
+    font-size: 18px;
+  }
+
+  .booking-card li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .booking-card li span:last-child {
+    color: #1d4ed8;
+  }
+}

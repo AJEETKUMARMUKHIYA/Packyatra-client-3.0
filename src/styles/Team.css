@@ -1,0 +1,208 @@
+/* ===============================
+   TEAM PAGE – PREMIUM GLOBAL UI
+================================ */
+
+.team-page {
+  width: 100%;
+  background: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.team-page .team-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.team-page .hero-content {
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+.team-page .hero-content h1 {
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.team-page .hero-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* ===============================
+   TEAM SECTION
+================================ */
+
+.team-page .team-section {
+  padding: 100px 0;
+}
+
+/* ===============================
+   CONTAINER (LOCAL)
+================================ */
+
+.team-page .container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+
+.team-page .section-title {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 80px;
+}
+
+.team-page .section-title h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.team-page .section-title p {
+  font-size: 17px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* ===============================
+   TEAM GRID
+================================ */
+
+.team-page .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* ===============================
+   TEAM MEMBER CARD
+================================ */
+
+.team-page .team-member {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.08);
+  transition: all 0.35s ease;
+}
+
+.team-page .team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 45px 90px rgba(15, 23, 42, 0.16);
+}
+
+/* ===============================
+   IMAGE
+================================ */
+
+.team-page .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-page .member-img img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.team-page .team-member:hover .member-img img {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   INFO
+================================ */
+
+.team-page .member-info {
+  padding: 30px 28px 34px;
+  text-align: center;
+}
+
+.team-page .member-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.team-page .position {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 14px;
+}
+
+.team-page .member-info p {
+  font-size: 15.5px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+
+.team-page .member-social {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.team-page .member-social a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.team-page .member-social a:hover {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .team-page .team-section {
+    padding: 70px 0;
+  }
+
+  .team-page .member-img img {
+    height: 300px;
+  }
+
+  .team-page .member-info {
+    padding: 26px 22px 30px;
+  }
+}

@@ -1,0 +1,98 @@
+/* ==============================
+   User Login Popup Styles
+================================= */
+.login-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  font-family: 'Roboto', sans-serif;
+}
+
+.login-popup .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.login-popup .login-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-popup .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.login-popup .form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.login-popup .form-group input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-popup .login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0f3d5e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.login-popup .login-btn:hover {
+  background-color: #0c2f4a;
+}
+
+.login-popup .error-text {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.login-popup .resend-otp {
+  font-size: 14px;
+  color: #0f3d5e;
+  text-align: right;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .login-popup {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-popup .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

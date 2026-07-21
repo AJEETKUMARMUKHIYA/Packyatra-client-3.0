@@ -1,0 +1,228 @@
+/* ===============================
+   GLOBAL
+================================ */
+.page-section {
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   HERO SLIDER
+================================ */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  height: 100%;
+}
+
+/* ===============================
+   SLIDES
+================================ */
+.slides-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-content {
+  max-width: 600px;
+  padding: 60px;
+  color: #fff;
+}
+
+.slide-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.slide-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   TABS
+================================ */
+.plan-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.plan-tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #f2f2f2;
+  font-weight: 600;
+  border-radius: 6px 6px 0 0;
+}
+
+.plan-tab.active {
+  background: #ff6b35;
+  color: #fff;
+}
+
+/* ===============================
+   FORM
+================================ */
+.plan-form-container {
+  margin-bottom: 15px;
+}
+
+.plan-form {
+  display: none;
+}
+
+.plan-form.active-form {
+  display: block;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.check-prices-btn {
+  width: 100%;
+  background: #ff6b35;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.check-prices-btn:hover {
+  background: #e85a28;
+}
+
+/* ===============================
+   SECURITY NOTE
+================================ */
+.security-note {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===============================
+   SLIDER ARROWS
+================================ */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 8px 14px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+.slider-arrow.prev {
+  left: 20px;
+}
+
+.slider-arrow.next {
+  right: 20px;
+}
+
+/* ===============================
+   SLIDER DOTS
+================================ */
+.slider-nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background: #ff6b35;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+  .slider-container {
+    flex-direction: column;
+  }
+
+  .slide-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slide-content h1 {
+    font-size: 30px;
+  }
+
+  .slide-content p {
+    font-size: 16px;
+  }
+}

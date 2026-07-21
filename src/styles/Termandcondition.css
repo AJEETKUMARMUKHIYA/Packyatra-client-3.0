@@ -1,0 +1,130 @@
+/* TermsAndcondition.css */
+    
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .company-name {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+    
+    .last-updated {
+        font-style: italic;
+        opacity: 0.9;
+        font-size: 0.9rem;
+    }
+    
+    .content {
+        padding: 40px;
+    }
+    
+    .intro-text {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 1.1rem;
+        color: #555;
+    }
+    
+    .terms-section {
+        margin-bottom: 30px;
+    }
+    
+    .terms-section h2 {
+        /* color: #1a6c2a; */
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #eaeaea;
+        font-size: 1.5rem;
+    }
+    
+    .term-item {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .term-item:before {
+        content: "•";
+        /* color: #3ad55b; */
+        font-weight: bold;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: -5px;
+    }
+    
+    .term-title {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+    
+    .term-description {
+        color: #555;
+    }
+    
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #c92e0e;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    .highlight-box p {
+        margin-bottom: 10px;
+    }
+    
+    .highlight-box p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .note {
+        background-color: #fff9e6;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 30px;
+        border-left: 4px solid #ffc107;
+    }
+    
+    footer {
+        background-color: #f1f9f5;
+        padding: 25px;
+        text-align: center;
+        border-top: 1px solid #eaeaea;
+        color: #666;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info {
+        margin-top: 15px;
+        font-weight: 600;
+        /* color: #1a6c2a; */
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            border-radius: 0;
+        }
+        
+        header {
+            padding: 20px;
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+        }
+        
+        .company-name {
+            font-size: 1.4rem;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+    }

@@ -1,0 +1,55 @@
+.floating-icons {
+  position: fixed;
+  left: 16px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+}
+
+/* Common icon style */
+.floating-icons .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+/* Call */
+.call-icon {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+}
+
+/* WhatsApp */
+.whatsapp-icon {
+  /* background: linear-gradient(135deg, #25d366, #1da851); */
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+}
+
+/* Hover effect */
+.floating-icons .icon:hover {
+  transform: translateX(6px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .floating-icons {
+    left: 10px;
+    bottom: 1px;
+  }
+
+  .floating-icons .icon {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+}

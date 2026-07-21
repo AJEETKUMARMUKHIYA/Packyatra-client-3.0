@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "c3c0d772-5685-498b-b924-c016017280ef"
+      }
+    },
+    "owner": "sumantdevs-organization",
+    "slug": "packyatra",
+    "android": {
+      "package": "com.sumantdevsorganization.packyatra"
+    },
+    "ios": {
+      "bundleIdentifier": "y",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    }
+  }
+}

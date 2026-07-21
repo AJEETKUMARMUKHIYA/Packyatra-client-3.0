@@ -1,0 +1,10 @@
+{
+  "name": "PackYatra",
+  "description": "PackYatra is a trusted packers and movers company in India providing affordable, safe, and fast house shifting, packing, and relocation services.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

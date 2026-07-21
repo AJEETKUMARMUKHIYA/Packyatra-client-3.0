@@ -1,0 +1,107 @@
+/* mobile-global.css - IMPORT THIS LAST */
+
+/* ===========================
+   GLOBAL MOBILE FIXES
+=========================== */
+
+/* Mobile Viewport Fix */
+@media (max-width: 768px) {
+  /* 1. Prevent horizontal scroll */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+  
+  /* 2. All containers 100% width */
+  .container, .wrapper, .page, .section, .content, .main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* 3. Buttons always visible */
+  button, .btn, .login-btn, .track-btn, .submit-btn, .cta-button {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 44px !important; /* Apple touch target */
+    min-width: 44px !important;
+    font-size: 16px !important;
+  }
+  
+  /* 4. Fix form elements */
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS zoom */
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* 5. Fix images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* 6. Fix flex/grid items */
+  .flex-item, .grid-item, [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* 7. Hide unnecessary elements */
+  .desktop-only, .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  /* Reduce padding further */
+  .container, .wrapper, .page, .section {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  /* Smaller buttons but still tappable */
+  button, .btn {
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+  }
+  
+  /* Adjust font sizes */
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+  h3 { font-size: 18px !important; }
+  p { font-size: 14px !important; }
+}
+
+/* ===========================
+   IMPORTANT OVERRIDES
+=========================== */
+/* Ensure header buttons work */
+.header-actions,
+.header .buttons,
+[class*="header"] button {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+/* Fix fixed elements on mobile */
+@media (max-width: 768px) {
+  .fixed-form,
+  .sticky-element,
+  [class*="fixed"],
+  [class*="sticky"] {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    margin: 15px 0 !important;
+  }
+}

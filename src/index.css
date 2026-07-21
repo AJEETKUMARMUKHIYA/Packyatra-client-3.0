@@ -1,0 +1,23 @@
+/* src/index.css */
+
+/* Tailwind CSS directives - MUST BE AT THE TOP */
+
+
+/* Your custom CSS - ADD BELOW Tailwind directives */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* You can add more custom styles below */

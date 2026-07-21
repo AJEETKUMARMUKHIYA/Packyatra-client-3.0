@@ -1,0 +1,243 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f5f9fb;
+  color: #2b2f38;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+.booking-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* =========================
+   HEADER (LIGHT + PREMIUM) - UPDATED FOR MOBILE
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+
+  border-bottom: 1px solid #e6e9f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.login-btn {
+  background: #2563eb;
+  color: #ffffff;
+  /* padding: 8px 14px; */
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 80px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.login-btn:hover {
+  background: #1e4ed8;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.booking-content {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  flex: 1;
+  width: 100%;
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+.left-pane {
+  flex: 3;
+  background: transparent;
+  width: 100%;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.tab-button.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+/* =========================
+   RIGHT SUMMARY PANEL
+========================= */
+.right-pane {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  width: 100%;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #1f2937;
+  color: #e5e7eb;
+  padding: 24px 16px;
+  text-align: center;
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE - UPDATED
+========================= */
+@media (max-width: 768px) {
+  .booking-content {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .right-pane {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .header {
+    padding: 12px 15px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 12px;
+  }
+  
+  .login-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-width: 70px;
+  }
+  
+  .tabs {
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 12px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none; /* Hide on very small screens or use hamburger menu */
+  }
+  
+  .logo {
+    font-size: 16px;
+  }
+  
+  .booking-content {
+    padding: 10px;
+  }
+  
+  .right-pane {
+    padding: 15px;
+  }
+  
+  /* Show mobile menu button if needed */
+  .mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .login-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

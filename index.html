@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+   <meta
+        name="description"
+       content="PackYatra is a trusted packers and movers company in India providing affordable, safe, and fast house shifting, packing, and relocation services."
+    />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/> -->
+
+     <!-- Apple -->
+    <link rel="apple-touch-icon" href="/favicon-180.png" />
+    <link rel="manifest" href="/manifest.json" />
+   
+    <title>PackYatra</title>
+    <meta name="keywords" content="packers and movers, moving services, Fastcare, relocation, shifting, bangalore
+         , home shifting, office relocation, vehicle transport, storage services, domestic shifting, intercity movers
+         , local movers, long-distance moving, packing services, loading and unloading, transportation, unpacking, furniture transport, bike transport, car transport
+         , household shifting, office shifting, moving company, moving quotes, moving estimates, moving tips, moving checklist, packing materials, moving supplies, climate-controlled storage, customer satisfaction,
+           affordable moving, transparent pricing, experienced movers, professional packers, relocation experts, hassle-free moving, stress-free relocation, local moving services, long-distance movers, interstate moving, international moving
+         , packing and unpacking, loading and unloading services, furniture packing, fragile item packing, moving labor services, moving assistance, relocation planning, moving logistics, moving solutions, best packers and movers
+         , moving customer service, moving support, moving resources, moving guides, moving advice, moving FAQs, packing hacks, relocation tips, moving day tips, post-move services
+         , moving follow-up, moving feedback, moving satisfaction survey, moving experience, relocation experience, moving journey, moving process, moving timeline, moving day checklist, pre-move planning, post-move organization" data-react-helmet="true">
+  </head>
+  <body>
+  <div id="root"></div>
+
+  <!-- React app entry for Vite -->
+  <script type="module" src="/src/index.jsx"></script>
+
+  <script>
+    // Emergency mobile menu fix
+    document.addEventListener('DOMContentLoaded', function() {
+      function fixMobileMenu() {
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-container');
+        const overlay = document.querySelector('.menu-overlay');
+
+        if (menuBtn && navMenu) {
+          const newBtn = menuBtn.cloneNode(true);
+          menuBtn.parentNode.replaceChild(newBtn, menuBtn);
+
+          document.querySelector('.mobile-menu-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const currentNav = document.querySelector('.nav-container');
+            const currentBtn = document.querySelector('.mobile-menu-btn');
+            const currentOverlay = document.querySelector('.menu-overlay');
+
+            if (currentNav) currentNav.classList.toggle('active');
+            if (currentBtn) currentBtn.classList.toggle('active');
+            if (currentOverlay) currentOverlay.classList.toggle('active');
+
+            document.body.style.overflow = currentNav.classList.contains('active') ? 'hidden' : '';
+          });
+
+          if (overlay) {
+            overlay.addEventListener('click', function() {
+              const nav = document.querySelector('.nav-container');
+              const btn = document.querySelector('.mobile-menu-btn');
+
+              if (nav) nav.classList.remove('active');
+              if (btn) btn.classList.remove('active');
+              this.classList.remove('active');
+              document.body.style.overflow = '';
+            });
+          }
+        } else {
+          setTimeout(fixMobileMenu, 500);
+        }
+      }
+
+      fixMobileMenu();
+    });
+  </script>
+</body>
+
+</html>

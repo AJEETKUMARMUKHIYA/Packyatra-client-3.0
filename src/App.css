@@ -1,0 +1,68 @@
+/* App.css - CLEAN VERSION */
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* Full-page layout */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Main content area - DO NOT ADD HEADER STYLES HERE */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Footer styles - Keep only if not using Footer.css */
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 0; /* Header.css handles this */
+  }
+  
+  /* Ensure touch targets are large enough */
+  button, a.btn, .login-btn, .track-btn {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  /* Prevent text overflow */
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}

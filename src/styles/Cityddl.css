@@ -1,0 +1,257 @@
+/* =========================
+   RELOCATION FORM WRAPPER
+========================= */
+.relocation-form {
+  position: sticky;
+  top: 120px; /* space below header */
+  max-height: calc(100vh - 240px); /* header + footer space */
+  overflow-y: auto;
+  z-index: 10;
+}
+
+/* =========================
+   FORM CONTAINER
+========================= */
+.form-container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 26px 30px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  max-width: 380px;
+}
+
+.form-container h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+/* =========================
+   TABS
+========================= */
+.tabs {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tabs button.active {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: #ffffff;
+}
+
+/* =========================
+   CITY SELECTOR
+========================= */
+.city-selector-compact label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.selected-city-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.city-icon-small {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+}
+
+.city-name-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.placeholder {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  color: #475569;
+}
+
+/* =========================
+   CITY GRID DROPDOWN
+========================= */
+.cities-grid-compact {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.city-item-compact {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: #f8fafc;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.city-item-compact img {
+  width: 32px;
+  margin-bottom: 6px;
+}
+
+.city-item-compact span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.city-item-compact.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+
+
+.form-group {
+  width: 100%;
+}
+
+.date-wrapper {
+  width: 100%;
+}
+
+.date-wrapper .react-datepicker-wrapper,
+.date-wrapper .react-datepicker__input-container {
+  width: 100%;
+}
+
+/* Wrapper must be full width */
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+/* Actual input field */
+.react-datepicker__input-container input.date-input {
+  width: 100%;
+  height: 44px;
+  padding: 10px 12px 10px 40px; /* left space for icon */
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.react-datepicker__input-container::before {
+  content: "📅";
+  position: absolute;
+  left: 12px;
+  top: 30%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.date-input-wrapper-premium .react-datepicker__input-container::before {
+  content: none !important;
+}
+
+
+/* =========================
+   ADDRESS SUGGESTIONS
+========================= */
+.suggestions {
+  position: absolute;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  margin-top: 6px;
+  z-index: 20;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #eff6ff;
+}
+
+.suggestion-item svg {
+  color: #2563eb;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* =========================
+   FOOTER SAFETY
+========================= */
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+  .relocation-form {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    margin: 20px 0;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .tabs button {
+    font-size: 13px;
+  }
+}
